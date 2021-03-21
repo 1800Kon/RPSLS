@@ -1,12 +1,57 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Paper Scissors Lizard Spock</title>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
+
 <body>
-    Hello World
+
+    <section class="text-gray-700 body-font self-center">
+        <div class="flex h-screen">
+            <div class="container flex flex-col items-center px-5 py-16 mx-auto md:flex-row">
+                <div
+                    class="flex flex-col items-center w-full pt-0 mb-16 text-left lg:flex-grow md:w-1/2 xl:mr-20 md:pr-24 md:items-start md:text-left md:mb-0 lg:text-center">
+                    <h1
+                        class="mb-4 text-2xl font-bold tracking-tighter text-center text-black lg:text-left lg:text-5xl title-font">
+                        Rock Paper Scissors Lizard Spock
+                    </h1>
+                    <h2 class="mb-4 text-xs font-medium tracking-widest text-black title-font">
+                        Now with 70% more test cases!
+                    </h2>
+
+                    <div class="flex justify-center">
+                        <button
+                            class="animate-pulse flex items-center px-6 py-2 mt-auto font-semibold text-white bg-black rounded-lg">
+                            Play now
+                        </button>
+                        <p class="mt-2 text-sm text-center text-gray-600 md:ml-6 md:mt-0 sm:text-left">
+                            No idea how to play?
+                            <br class="hidden lg:block">
+                            <a href="instructions.html"
+                                class="inline-flex items-center font-semibold text-blue-700 md:mb-2 lg:mb-0 hover:text-blue-400">
+                                Instructions
+                                <svg class="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    width="20" height="20" fill="currentColor">
+                                    <path fill="none" d="M0 0h24v24H0z" />
+                                    <path
+                                        d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" />
+                                </svg>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                <div class="w-5 lg:max-w-lg lg:w-full">
+                    <img class="object-cover object-center rounded-lg " alt="Rock paper scissors lizar spock image"
+                        src="../images/rpsls.jpg">
+                </div>
+            </div>
+        </div>
+
+    </section>
 </body>
+
 </html>
