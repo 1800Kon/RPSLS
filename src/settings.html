@@ -31,7 +31,6 @@
               Choose to play with multiple players or robots
             </p>
           </div>
-
           <div class="mt-10">
             <dl
               class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-10 md:gap-y-10"
@@ -41,7 +40,6 @@
                   <div
                     class="absolute flex items-center justify-center h-16 w-16 rounded-full text-blue-800 bg-gray-200 text-white"
                   >
-                    <!-- Heroicon name: outline/globe-alt -->
                     <i class="material-icons" style="font-size: 36px"
                       >android</i
                     >
@@ -151,7 +149,7 @@
                   <select
                     class="ml-20 border border-gray-300 rounded-md text-gray-600 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none"
                   >
-                    <option>Choose a option</option>
+                    <option>Choose an option</option>
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -165,7 +163,9 @@
                   <div
                     class="absolute flex items-center justify-center h-16 w-16 rounded-full text-blue-800 bg-gray-200 text-white"
                   >
-                  <i class="material-icons" style="font-size:36px">whatshot</i>
+                    <i class="material-icons" style="font-size: 36px"
+                      >whatshot</i
+                    >
                   </div>
                   <p class="ml-20 text-lg leading-6 font-medium text-gray-900">
                     Bet
@@ -196,14 +196,26 @@
           </div>
         </div>
       </div>
-      <div class="w-80 mx-auto bg-blue-100">
-        <a href="index.html">
+      <div class="h-14 w-96 flex mx-auto content-center">
+        <div>
+          <a href="index.html">
             <button
-                class="animate-pulse flex items-center px-11 py-2 mx-auto font-semibold text-white bg-black rounded-lg">
-                Take me back to the main menu
+              class="animate-pulse flex px-8 py-2 mx-auto font-semibold text-white bg-black rounded-lg"
+            >
+              Main menu
             </button>
-        </a>
-    </div>
+          </a>
+        </div>
+        <div class="ml-20">
+          <a href="#">
+            <button
+              class="animate-pulse flex px-11 py-2 mx-auto font-semibold text-white bg-black rounded-lg"
+            >
+              Continue
+            </button>
+          </a>
+        </div>
+      </div>
     </section>
   </body>
 </html>
