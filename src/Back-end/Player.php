@@ -7,7 +7,10 @@ abstract class Player
     protected $move;
     protected $points;
     protected $bet;
-
+    protected $roundWins;
+    protected $roundLosses;
+    protected $roundTies;
+    
     //methods
     abstract public function setBet($bet);
     abstract public function getBet();
@@ -17,7 +20,12 @@ abstract class Player
     abstract public function getPoints();
     abstract public function setMove($move);
     abstract public function getMove();
-    
+    abstract function setRoundWins($roundWins);
+    abstract function getRoundWins();
+    abstract function setRoundLosses($roundLosses);
+    abstract function getRoundLosses();
+    abstract function setRoundTies($roundTies);
+    abstract function getRoundTies();
 }
 
 ?>
