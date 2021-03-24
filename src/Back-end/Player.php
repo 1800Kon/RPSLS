@@ -1,34 +1,23 @@
 <?php
 
-
-class Player
+abstract class Player
 {
     //properties
-    public $name;
-    public $colour;
-    public $points;
+    protected $name;
+    protected $move;
+    protected $points;
+    protected $bet;
 
     //methods
-    function bet($input)
-    {
-
-    }
-
-    function add_points($input)
-    {
-        
-    }
-
-    //getters and setters
-    function set_name($name)
-    {
-        $this->name = $name;
-    }
-
-    function get_name()
-    {
-        return $this->name;
-    }
+    abstract public function setBet($bet);
+    abstract public function getBet();
+    abstract public function setName($name);
+    abstract public function getName();
+    abstract public function setPoints($points);
+    abstract public function getPoints();
+    abstract public function setMove($move);
+    abstract public function getMove();
+    
 }
 
 ?>
