@@ -74,11 +74,10 @@ class GameScript
             $player->setPoints($player->getPoints() + $points);
         }
     }
-
+    
     public function endGame()
     {
         return $this->players();
-        $this->players
     }
 
     public function playAgain()

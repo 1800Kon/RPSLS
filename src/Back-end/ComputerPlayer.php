@@ -4,11 +4,9 @@
 class ComputerPlayer extends Player
 {
 
-    private $difficulty;
-
-    public function __construct($difficulty)
+    public function __construct($name)
     {
-        $this->difficulty = $difficulty;
+        $this->name = $name;
     }
 
     public function setBet($bet)
@@ -50,16 +48,6 @@ class ComputerPlayer extends Player
     {
         return $this->move;
     }
-
-    public function setDifficulty($difficulty)
-    {
-        $this->difficulty = $difficulty;
-    }
-
-    public function getDifficulty()
-    {
-        return $this->difficulty;
-    }
     
     public function setRoundWins($roundWins)
     {
@@ -91,22 +79,9 @@ class ComputerPlayer extends Player
         return $this->roundTies;
     }
     
-    public function generateMove($player)
-    {
-        switch ($this->getDifficulty())
-        {
-            case 1:
-                $this->setMove(rand(1, 5));
-                break;
-            case 2:
-                //TODO: add for medium difficulty
-                break;
-
-            case 3:
-                //TODO: add for hard difficulty
-                break;
-
-        }
+    public function generateMove()
+    {  
+        return rand(1, 5);
     }
 
 }

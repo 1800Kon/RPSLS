@@ -4,6 +4,11 @@
 class HumanPlayer extends Player
 {
 
+    public function __construct($name)
+    {
+        $this->name = $name;
+    }
+
     public function setBet($bet)
     {
         $this->bet = $bet;

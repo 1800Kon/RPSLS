@@ -11,6 +11,7 @@ abstract class Player
     protected $roundLosses;
     protected $roundTies;
     
+    
     //methods
     abstract public function setBet($bet);
     abstract public function getBet();
