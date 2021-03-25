@@ -54,12 +54,46 @@ class GameScript
 
     public function calculatePoints()
     {
-    // TODO: POINT CALCULATION TAKE WINNERS AND LOSERS
+        $moveEvaluator = new MoveEvaluator($this->players);
+        $moveEvaluator->evaluate();
         foreach($this->players as $player)
         {
+            $points = 0;
 
+            if ($player->getBet() == 0)
+            {
+                $points += ($player->getRoundWins() * 10);
+                $points += ($player->getRoundLosses() * -10);
+            }
+            else
+            {
+                $points += ($player->getRoundWins() * (10 * $player->getBet()));
+                $points += ($player->getRoundWins() * (-10 * $player->getBet()));
+            }
+
+            $player->setPoints($player->getPoints() + $points);
         }
     }
+
+    public function endGame()
+    {
+        return $this->players();
+        $this->players
+    }
+
+    public function playAgain()
+    {
+        foreach($this->players as $player)
+        {
+            $player->setRoundTies(0);
+            $player->setRoundLosses(0);
+            $player->setRoundWins(0);
+            $player->setBet(0);
+            $player->setMove(null);
+            incrementRound();
+        }
+    }
+
 
 
 }

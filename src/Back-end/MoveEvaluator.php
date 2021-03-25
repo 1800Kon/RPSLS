@@ -11,24 +11,24 @@ class MoveEvaluator
         $this->playerList = $playerList;
     }
 
-    function evaluate($playerList)
+    function evaluate()
     {
-        foreach($playerList as $player)
+        foreach($this->playerList as $player)
         {
-            foreach($playerList as $comparedPlayer)
+            foreach($this->playerList as $comparedPlayer)
             {
                 if($player != $comparedPlayer)
                 {
                     switch ($this->matrix($player->getMove(), $comparedPlayer->getMove()))
                     {
                         case true:
-                            //TODO: player wins and comparedPlayer loses
+                            $player->setRoundWins($player->getRoundWins()+1);
                             break;
                         case false:
-                            //TODO: player loses and comparedPlayer wins
+                            $player->setRoundLosses($player->getRoundLosses()+1);
                             break;
                         default:
-                            //TODO: player and comparedPlayer draw
+                            $player->setRoundTies($player->getRoundTies()+1);
                     }
                 }
             }

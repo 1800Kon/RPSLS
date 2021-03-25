@@ -26,7 +26,7 @@ class HumanPlayer extends Player
 
     public function setPoints($points)
     {
-        $this->points += $points;
+        $this->points = $points;
     }
 
     public function getPoints()
