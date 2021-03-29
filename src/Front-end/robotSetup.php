@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -67,7 +70,7 @@
         </div>
       </div>
       <div class="w-80 mx-auto">
-        <a href="humanSetup.html">
+        <a href="humanSetup.php">
           <button
             class="animate-pulse flex items-center px-24 py-2 mx-auto font-semibold text-white bg-black rounded-lg"
           >

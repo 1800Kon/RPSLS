@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -53,30 +56,46 @@
                     fill-rule="nonzero"
                   />
                 </svg>
-                <select
-                  class="border border-gray-300 rounded-md text-gray-600 h-10 pl-5 pr-10 bg-white md:pr-7 hover:border-gray-400 focus:outline-none appearance-none"
-                >
-                  <option>Choose a number</option>
-                  <option value="0">0</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                </select>
+                <form action="" method="post">
+                  <select name="playerCount" class="border border-gray-300 rounded-md text-gray-600 h-10 pl-5 pr-10 bg-white md:pr-7 hover:border-gray-400 focus:outline-none appearance-none">
+                    <option value="null">Choose a number</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                  <div class="w-80 mx-auto">
+                          <input class="animate-pulse flex items-center px-24 py-2 mx-auto font-semibold text-white bg-black rounded-lg" type="submit" name="submit" value="Continue">
+                  </div>
+
+                    <?php
+
+                    if(isset($_POST['submit']))
+                    {
+                        $playerCount = $_POST['playerCount'];
+                        if(is_numeric($playerCount) && ($playerCount <= 4 && $playerCount >= 0))
+                        {
+                            $_SESSION['playerCount'] = $playerCount;
+                            header('Location: playerForm.php');
+                        }
+                        else
+                        {
+                            echo "Bitch choose an amount of players dont try to be funny";
+                        }
+
+                    }
+
+                    ?>
+
+                </form>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="w-80 mx-auto">
-        <a href="playerForm.html">
-          <button
-            class="animate-pulse flex items-center px-24 py-2 mx-auto font-semibold text-white bg-black rounded-lg"
-          >
-            Continue
-          </button>
-        </a>
-      </div>
+
     </section>
   </body>
 </html>
+
