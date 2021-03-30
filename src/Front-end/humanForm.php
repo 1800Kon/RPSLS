@@ -1,5 +1,6 @@
 <?php
-//session_start();
+include '../Back-end/GameScript.php';
+session_start();
 ?>
 
 <html lang="en">
@@ -18,8 +19,9 @@
           >
             Player names
           </h1>
-            <div
-                class="flex flex-col w-full p-8 mx-auto mt-10 border rounded-lg lg:w-2/6 md:w-1/2 md:ml-auto md:mt-0">
+            <div class="flex flex-col w-full p-8 mx-auto mt-10 border rounded-lg lg:w-2/6 md:w-1/2 md:ml-auto md:mt-0">
+                <form action="" method="POST">
+
                 <?php
 
                 if (isset($_SESSION['playerCount']))
@@ -28,29 +30,31 @@
                 }
                 else
                 {
-                    $playerCount = NULL;
+                    $playerCount = null;
                 }
-                    if($playerCount == 0 && $playerCount != NULL)
+                    if($playerCount == 0 && $playerCount != null)
                     {
-                        header('Location: robotSetup.php');
+                        header('Location: computerSetup.php');
                     }
                     else
                     {
                         for($i = 0; $i < $playerCount; $i++)
                         {
                             echo "<div>
-                                <input name='player" . ($i+1) . "' placeholder='Player  " . ($i+1) . "'s name'
+                                <input name='player" . ($i + 1) . "' placeholder='Player  " . ($i + 1) . "'s name'
                                 class='w-full px-4 py-2 mb-4 text-black bg-gray-100 border-transparent rounded-lg mr-4text-base'>
                                 </div>";
                         }
                     }
 
-                    if ($playerCount != NULL)
+                    if ($playerCount != null)
                     {
                         echo "
-                    <button
-                        type='submit' class='px-8 py-2 font-semibold text-white bg-black rounded-lg hover:bg-gray-800 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2'>Next</button>
-                    </div>";
+                    <input
+                        class='px-8 py-2 font-semibold text-white bg-black rounded-lg hover:bg-gray-800 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2'
+                        type='submit' name='submit' value='next'>
+                    </div>
+                        </form>";
                     }
                     else
                     {
@@ -66,27 +70,29 @@
 <?php
 if(isset($_POST['submit']))
 {
-    $game = new GameScript();
+    $game = $_SESSION['game'];
     for($i = 0; $i < $playerCount; $i++)
     {
-        if (is_string($_POST['player' . $i]))
+        if (is_string($_POST['player' . ($i + 1)]))
         {
-            $playerName = trim($_POST['player' . $i]);
+            $playerName = trim($_POST['player' . ($i + 1)]);
         }
         else
         {
-            $playerName = "Haha u ain't getting in chad number " . $i;
+            $playerName = "Haha u ain't getting in chad number " . ($i + 1);
         }
 
-        $player = new HumanPlayer($playerName);
-        $game -> addPlayer($player);
+        if (!$game -> addPlayer(new HumanPlayer($playerName)))
+        {
+            session_unset();
+            session_destroy();
+            header('Location: humanSetup.php');
+        }
     }
 
-    $_SESSION['game'] = $game;
-
-    if ($game->getPlayers() < 4)
+    if (count($game->getPlayers()) < 4)
     {
-        header('Location: robotSetup.php');
+        header('Location: computerSetup.php');
     }
     else
     {

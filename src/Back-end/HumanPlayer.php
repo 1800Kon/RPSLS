@@ -1,5 +1,5 @@
 <?php
-
+include_once 'Player.php';
 
 class HumanPlayer extends Player
 {
@@ -7,6 +7,12 @@ class HumanPlayer extends Player
     public function __construct($name)
     {
         $this->name = $name;
+        $this->points = 0;
+        $this->bet = 0;
+        $this->move = "null";
+        $this->roundLosses = 0;
+        $this->roundWins = 0;
+        $this->roundTies = 0;
     }
 
     public function setBet($bet)
@@ -14,7 +20,7 @@ class HumanPlayer extends Player
         $this->bet = $bet;
     }
 
-    public function getBet()
+    public function getBet(): int
     {
         return $this->bet;
     }
@@ -24,7 +30,7 @@ class HumanPlayer extends Player
         $this->$name = $name;
     }
 
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }
@@ -34,7 +40,7 @@ class HumanPlayer extends Player
         $this->points = $points;
     }
 
-    public function getPoints()
+    public function getPoints(): int
     {
         return $this->points;
     }
@@ -44,7 +50,7 @@ class HumanPlayer extends Player
         $this->move = $move;
     }
 
-    public function getMove()
+    public function getMove(): int
     {
         return $this->move;
     }
@@ -54,7 +60,7 @@ class HumanPlayer extends Player
         $this->roundWins = $roundWins;
     }
     
-    public function getRoundWins()
+    public function getRoundWins(): int
     {
         return $this->roundWins;
     }
@@ -64,7 +70,7 @@ class HumanPlayer extends Player
         $this->roundLosses = $roundLosses;
     }
     
-    public function getRoundLosses()
+    public function getRoundLosses(): int
     {
         return $this->roundLosses;
     }
@@ -74,7 +80,7 @@ class HumanPlayer extends Player
         $this->roundTies = $roundTies;
     }
     
-    public function getRoundTies()
+    public function getRoundTies(): int
     {
         return $this->roundTies;
     }

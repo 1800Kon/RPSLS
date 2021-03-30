@@ -1,6 +1,9 @@
 <?php
+include '../Back-end/GameScript.php';
 session_start();
 ?>
+
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -54,30 +57,56 @@ session_start();
                     fill-rule="nonzero"
                   />
                 </svg>
-                <select
-                  class="border border-gray-300 rounded-md text-gray-600 h-10 pl-5 pr-10 bg-white md:pr-7 hover:border-gray-400 focus:outline-none appearance-none"
-                >
-                  <option>Choose a number</option>
-                  <option value="0">0</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                </select>
+                <form action="" method="POST">
+                    <select name="numCpuPlayers" class="border border-gray-300 rounded-md text-gray-600 h-10 pl-5 pr-10 bg-white md:pr-7 hover:border-gray-400 focus:outline-none appearance-none">
+                      <option>Choose a number</option>
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
+                    <div class="w-80 mx-auto">
+                        <input type="submit" name="submit" value ='Continue' class="animate-pulse flex items-center px-24 py-2 mx-auto font-semibold text-white bg-black rounded-lg">
+                    </div>
+                </form>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="w-80 mx-auto">
-        <a href="humanSetup.php">
-          <button
-            class="animate-pulse flex items-center px-24 py-2 mx-auto font-semibold text-white bg-black rounded-lg"
-          >
-            Continue
-          </button>
-        </a>
-      </div>
     </section>
   </body>
 </html>
+
+<?php
+if (isset($_POST['submit']))
+{
+    if (isset($_SESSION['game']))
+    {
+        $game = $_SESSION['game'];
+        $numberOfPlayers = count($game->getPlayers()) + $_POST['numCpuPlayers'];
+        if($numberOfPlayers <= 4 && $numberOfPlayers >= 2)
+        {
+            for($i = 0; $i < ($_POST['numCpuPlayers']); $i++)
+            {
+                $game->addPlayer(new ComputerPlayer("computer" . ($i + 1)));
+            }
+            header('Location: game.php');
+        }
+        else 
+        {
+            session_unset();
+            session_destroy();
+            header('Location: humanSetup.php');
+        }
+
+    }
+    else
+    {
+        session_unset();
+        session_destroy();
+        header('Location:index.html');
+    }
+}
+?>

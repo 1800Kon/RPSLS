@@ -1,4 +1,5 @@
 <?php
+include '../Back-end/GameScript.php';
 session_start();
 ?>
 <html lang="en">
@@ -56,7 +57,7 @@ session_start();
                     fill-rule="nonzero"
                   />
                 </svg>
-                <form action="" method="post">
+                <form action="" method="POST">
                   <select name="playerCount" class="border border-gray-300 rounded-md text-gray-600 h-10 pl-5 pr-10 bg-white md:pr-7 hover:border-gray-400 focus:outline-none appearance-none">
                     <option value="null">Choose a number</option>
                     <option value="0">0</option>
@@ -74,10 +75,12 @@ session_start();
                     if(isset($_POST['submit']))
                     {
                         $playerCount = $_POST['playerCount'];
+                        $game = new GameScript();
                         if(is_numeric($playerCount) && ($playerCount <= 4 && $playerCount >= 0))
                         {
                             $_SESSION['playerCount'] = $playerCount;
-                            header('Location: playerForm.php');
+                            $_SESSION['game'] = $game;
+                            header('Location: humanForm.php');
                         }
                         else
                         {

@@ -116,7 +116,7 @@
             </div>
         </div>
       <div class="w-80 mx-auto">
-        <a href="robotSetup.php">
+        <a href="humanSetup.php">
             <button
             class="mx-auto flex items-center px-24 py-2 font-semibold text-white bg-black rounded-lg hover:bg-gray-800 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">Play Again</button>
           </button>

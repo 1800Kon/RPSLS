@@ -1,10 +1,11 @@
 <?php
-
+include_once 'ComputerPlayer.php';
+include_once 'HumanPlayer.php';
 
 class MoveEvaluator
 {
 
-    public $playerList;
+    public array $playerList;
 
     public function __construct($playerList)
     {
@@ -36,7 +37,7 @@ class MoveEvaluator
     }
 
     //1 = rock, 2 = paper, 3 = scissors, 4 = lizard, 5 = spock
-    public function matrix($move1, $move2)
+    public function matrix($move1, $move2): ?bool
     {
         //Handling the moves if move1 beats move2
         if ($move1 == 1 && $move2 == 3)
