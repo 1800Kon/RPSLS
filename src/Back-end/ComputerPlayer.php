@@ -7,12 +7,13 @@ class ComputerPlayer extends Player
     public function __construct($name)
     {
         $this->name = $name;
-        $this->move = null;
+        $this->move = "null";
         $this->points = 0;
         $this->bet = 0;
-        $this-> roundWins = 0;
+        $this->roundWins = 0;
         $this->roundLosses = 0;
         $this->roundTies = 0;
+        $this->moveCompared = false;
     }
 
     public function setBet($bet)
@@ -54,7 +55,7 @@ class ComputerPlayer extends Player
     {
         return $this->move;
     }
-    
+
     public function setRoundWins($roundWins)
     {
         $this->roundWins = $roundWins;
@@ -69,7 +70,7 @@ class ComputerPlayer extends Player
     {
         $this->roundLosses = $roundLosses;
     }
-    
+
     public function getRoundLosses()
     {
         return $this->roundLosses;
@@ -79,17 +80,26 @@ class ComputerPlayer extends Player
     {
         $this->roundTies = $roundTies;
     }
-    
+
     public function getRoundTies()
     {
         return $this->roundTies;
     }
-    
+
     public function generateMove()
-    {  
-        return rand(1, 5);
+    {
+        $this->move = rand(1, 5);
     }
 
+    function setMoveCompared($moveCompared)
+    {
+        $this->moveCompared = $moveCompared;
+    }
+
+    function isMoveCompared(): bool
+    {
+        return $this->moveCompared;
+    }
 }
 
 ?>

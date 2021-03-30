@@ -13,6 +13,7 @@ class HumanPlayer extends Player
         $this->roundLosses = 0;
         $this->roundWins = 0;
         $this->roundTies = 0;
+        $this->moveCompared = false;
     }
 
     public function setBet($bet)
@@ -50,7 +51,7 @@ class HumanPlayer extends Player
         $this->move = $move;
     }
 
-    public function getMove(): int
+    public function getMove(): string
     {
         return $this->move;
     }
@@ -59,7 +60,7 @@ class HumanPlayer extends Player
     {
         $this->roundWins = $roundWins;
     }
-    
+
     public function getRoundWins(): int
     {
         return $this->roundWins;
@@ -69,7 +70,7 @@ class HumanPlayer extends Player
     {
         $this->roundLosses = $roundLosses;
     }
-    
+
     public function getRoundLosses(): int
     {
         return $this->roundLosses;
@@ -79,10 +80,21 @@ class HumanPlayer extends Player
     {
         $this->roundTies = $roundTies;
     }
-    
+
     public function getRoundTies(): int
     {
         return $this->roundTies;
+    }
+
+
+    function setMoveCompared($moveCompared)
+    {
+        $this->moveCompared = $moveCompared;
+    }
+
+    function isMoveCompared(): bool
+    {
+        return $this->moveCompared;
     }
 }
 
