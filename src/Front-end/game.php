@@ -22,8 +22,7 @@ session_start();
                     foreach ($game->getPlayers() as $player) {
 
                         if ($player instanceof ComputerPlayer) {
-                            if($player->getMove() == "null")
-                            {
+                            if ($player->getMove() == "null") {
                                 $player->generateMove();
                                 $game->setmoveCount($game->getMoveCount() + 1);
                                 $_SESSION['player' . $i . 'Move'] = $player->getMove();
@@ -125,13 +124,11 @@ if (isset($_SESSION['game'])) {
     $isThereAComputerPlayer = false;
     foreach ($game->getPlayers() as $player) {
 
-        if ($player instanceof ComputerPlayer)
-        {
+        if ($player instanceof ComputerPlayer) {
             $isThereAComputerPlayer = true;
         }
 
-        if (isset($_POST['submit' . $j]) && isset($_POST['radio' . $j]))
-        {
+        if (isset($_POST['submit' . $j]) && isset($_POST['radio' . $j])) {
             $_SESSION['player' . $j . 'Move'] = $_POST['radio' . $j];
 
             $player->setMove($_POST['radio' . $j]);
@@ -147,12 +144,12 @@ if (isset($_SESSION['game'])) {
                 }
             }
 
-            if ($player->getMove() != 'null'){
+            if ($player->getMove() != 'null') {
                 echo " <script> location.replace('game.php') </script>";
-                }
+            }
         }
         $j++;
-        
+
         if (!$game->isPointsDistributed()) {
             if ($game->getMoveCount() == count($game->getPlayers())) {
                 $game->setCurrentRoundComplete(true);
