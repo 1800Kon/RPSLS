@@ -3,13 +3,13 @@
 abstract class Player
 {
     //properties
-    protected $name;
+    protected string $name;
     protected $move;
-    protected $points;
-    protected $bet;
-    protected $roundWins;
-    protected $roundLosses;
-    protected $roundTies;
+    protected int $points;
+    protected int $bet;
+    protected int $roundWins;
+    protected int $roundLosses;
+    protected int $roundTies;
     
     
     //methods

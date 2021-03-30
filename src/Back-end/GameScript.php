@@ -1,23 +1,26 @@
 <?php
+include_once 'HumanPlayer.php';
+include_once 'ComputerPlayer.php';
+include_once 'MoveEvaluator.php';
 
 
 class GameScript
 {
-    public $players;
-    public $roundCounter;
+    public array $players;
+    public int $roundCounter;
 
     public function __construct()
     {
-        $this->players = array(4);
+        $this->players = [];
         $this->roundCounter = 0;
     }
 
-    public function getPlayers()
+    public function getPlayers(): array
     {
         return $this->players;
     }
 
-    public function addPlayer($player)
+    public function addPlayer($player): bool
     {
         if (!$this->isMaxPlayersReached())
         {
@@ -30,7 +33,7 @@ class GameScript
         }
     }
 
-    public function getRoundCounter()
+    public function getRoundCounter(): int
     {
         return $this->roundCounter;
     }
@@ -40,9 +43,9 @@ class GameScript
         $this->roundCounter += 1;
     }
 
-    public function isMaxPlayersReached()
+    public function isMaxPlayersReached(): bool
     {
-        if(count($this->players) < 4)
+        if(count($this->players) > 4)
         {
             return true;
         }

@@ -1,5 +1,5 @@
 <?php
-
+include_once 'Player.php';
 
 class ComputerPlayer extends Player
 {
@@ -7,6 +7,12 @@ class ComputerPlayer extends Player
     public function __construct($name)
     {
         $this->name = $name;
+        $this->move = null;
+        $this->points = 0;
+        $this->bet = 0;
+        $this-> roundWins = 0;
+        $this->roundLosses = 0;
+        $this->roundTies = 0;
     }
 
     public function setBet($bet)
