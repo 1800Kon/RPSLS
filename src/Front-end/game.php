@@ -50,10 +50,10 @@ session_start();
                                                <div class='flex mx-auto my-1'>
                                                     <div class='flex mx-auto'>
                                                        ";
-                                                        if (!isset($_SESSION['player' . $i . 'Move'])) {
-                                                            echo "<input type='radio' name='radio" . $i . "' value='1'>";
-                                                        }
-                                                        echo "
+                        if (!isset($_SESSION['player' . $i . 'Move'])) {
+                            echo "<input type='radio' name='radio" . $i . "' value='1'>";
+                        }
+                        echo "
                                                     </div>
                                                 </div>
                                             </div>
@@ -65,10 +65,10 @@ session_start();
                                                <div class='flex mx-auto my-1'>
                                                     <div class='flex mx-auto'>
                                                        ";
-                                                        if (!isset($_SESSION['player' . $i . 'Move'])) {
-                                                            echo "<input type='radio' name='radio" . $i . "' value='2'>";
-                                                        }
-                                                        echo "
+                        if (!isset($_SESSION['player' . $i . 'Move'])) {
+                            echo "<input type='radio' name='radio" . $i . "' value='2'>";
+                        }
+                        echo "
                                                     </div>
                                                 </div>
                                             </div>
@@ -80,10 +80,10 @@ session_start();
                                                <div class='flex  mx-auto my-1'>
                                                     <div class='flex mx-auto'>
                                                        ";
-                                                        if (!isset($_SESSION['player' . $i . 'Move'])) {
-                                                            echo "<input type='radio' name='radio" . $i . "' value='3'>";
-                                                        }
-                                                        echo "
+                        if (!isset($_SESSION['player' . $i . 'Move'])) {
+                            echo "<input type='radio' name='radio" . $i . "' value='3'>";
+                        }
+                        echo "
                                                     </div>
                                                 </div>
                                             </div>
@@ -95,10 +95,10 @@ session_start();
                                                <div class='flex mx-auto my-1'>
                                                     <div class='flex mx-auto'>
                                                        ";
-                                                        if (!isset($_SESSION['player' . $i . 'Move'])) {
-                                                            echo "<input type='radio' name='radio" . $i . "' value='4'>";
-                                                        }
-                                                        echo "
+                        if (!isset($_SESSION['player' . $i . 'Move'])) {
+                            echo "<input type='radio' name='radio" . $i . "' value='4'>";
+                        }
+                        echo "
                                                     </div>
                                                 </div>
                                             </div>
@@ -110,25 +110,25 @@ session_start();
                                                <div class='flex mx-auto my-1'>
                                                     <div class='flex mx-auto'>
                                                        ";
-                                                        if (!isset($_SESSION['player' . $i . 'Move'])) {
-                                                            echo "<input type='radio' name='radio" . $i . "' value='5'>";
-                                                        }
-                                                        echo "
+                        if (!isset($_SESSION['player' . $i . 'Move'])) {
+                            echo "<input type='radio' name='radio" . $i . "' value='5'>";
+                        }
+                        echo "
                                                     </div>
                                                 </div>
                                             </div>
                                        </div>
                                        <div class='flex-column h-auto w-5/6 m-auto mt-5'>
                                             ";
-                                            if (!isset($_SESSION['player' . $i . 'Move'])) {
-                                                echo "<div class='flex mt-10 justify-center h-auto w-auto mx-auto'>";
-                                                    echo "<input type='number' name='player" . $i . "Bet'>";
-                                                echo "</div>";
-                                                echo "<div class='mt-10'>";
-                                                    echo "<input type='submit' name='submit" . $i . "' value='Lock in selection' class='flex m-auto animate-pulse flex items-center px-6 py-2 mt-auto font-semibold text-white bg-black rounded-lg'>";
-                                                echo "</div>";
-                                            }
-                                            echo "
+                        if (!isset($_SESSION['player' . $i . 'Move'])) {
+                            echo "<div class='flex mt-10 justify-center h-auto w-auto mx-auto'>";
+                            echo "<input type='number' name='player" . $i . "Bet'>";
+                            echo "</div>";
+                            echo "<div class='mt-10'>";
+                            echo "<input type='submit' name='submit" . $i . "' value='Lock in selection' class='flex m-auto animate-pulse flex items-center px-6 py-2 mt-auto font-semibold text-white bg-black rounded-lg'>";
+                            echo "</div>";
+                        }
+                        echo "
                                         </div>
                                     </div>
                                 </form> 
@@ -198,4 +198,4 @@ if (isset($_SESSION['game'])) {
     }
 } else
 
-?>
+    ?>

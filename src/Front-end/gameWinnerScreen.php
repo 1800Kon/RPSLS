@@ -23,8 +23,7 @@ session_start();
                 </p>
                 <p class="mt-4 text-xl text-gray-500 lg:mx-auto">
                     <?php
-                    if (isset($_SESSION['game']))
-                    {
+                    if (isset($_SESSION['game'])) {
                         if (isset($_SESSION['winner'])) {
                             $winners = $_SESSION['winner'];
 
@@ -35,12 +34,11 @@ session_start();
                             }
                             foreach ($winners as $winner) {
                                 echo "<div class='mb-5 text-base text-center text-black md:text-5xl lg:text-center lg:text-base title-font'>";
-                                echo $winner->getName() .  " ";
+                                echo $winner->getName() . " ";
                                 echo "</div>";
                             }
                         }
-                    }
-                    else{
+                    } else {
                         session_unset();
                         session_destroy();
                         header('Location:index.html');

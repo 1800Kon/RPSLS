@@ -62,20 +62,20 @@ session_start();
                             </div>
 
                             <?php
-                                if (isset($_POST['submit'])) {
-                                    $playerCount = $_POST['playerCount'];
-                                    $game = new GameScript();
-                                    if (is_numeric($playerCount) && ($playerCount <= 4 && $playerCount >= 0)) {
-                                        $_SESSION['playerCount'] = $playerCount;
-                                        $_SESSION['game'] = $game;
-                                        header('Location: humanForm.php');
-                                    } else {
-                                        session_unset();
-                                        session_destroy();
-                                        header('Location:humanSetup.php');
-                                    }
-    
+                            if (isset($_POST['submit'])) {
+                                $playerCount = $_POST['playerCount'];
+                                $game = new GameScript();
+                                if (is_numeric($playerCount) && ($playerCount <= 4 && $playerCount >= 0)) {
+                                    $_SESSION['playerCount'] = $playerCount;
+                                    $_SESSION['game'] = $game;
+                                    header('Location: humanForm.php');
+                                } else {
+                                    session_unset();
+                                    session_destroy();
+                                    header('Location:humanSetup.php');
                                 }
+
+                            }
                             ?>
                         </form>
                     </div>
