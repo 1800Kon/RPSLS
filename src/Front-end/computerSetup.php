@@ -31,7 +31,7 @@ session_start();
                     Settings
                 </p>
                 <p class="mt-4 text-xl text-gray-500 lg:mx-auto">
-                    Choose how many robot
+                    Choose how many robots
                 </p>
             </div>
             <div class="mt-8 md:ml-auto md:mr-auto lg:ml-72 lg:mr-72">

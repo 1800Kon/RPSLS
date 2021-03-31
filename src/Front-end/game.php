@@ -45,73 +45,101 @@ session_start();
                                             <img src='../../images/business.png' class='h-5/6 w-5/6 rounded-3xl m-auto'>
                                         </div>
                                         <div class='flex bg-gray-300 mt-5 h-20 rounded-3xl'>
-                                            <div class='flex h-5/6 w-1/5 my-auto mx-auto rounded-3xl'>
+                                            <div class='flex-column h-5/6 w-1/5 my-auto mx-auto rounded-3xl'>
                                                 <div class='m-auto h-5/6 w-5/6 rounded-3xl'>
                                                         <img src='../../images/dude.png' class='h-full w-full rounded-3xl m-auto'>
-                                                    ";
-                        if (!isset($_SESSION['player' . $i . 'Move'])) {
-                            echo "<input type='radio' name='radio" . $i . "' value='1'>";
-                        }
-                        echo "
                                                </div>
-                                            </div>
-                                            <div class='flex h-5/6 w-1/5 my-auto mx-auto rounded-3xl'>
-                                                <div class='m-auto h-5/6 w-5/6 rounded-3xl'>
-                                                        <img src='../../images/dude.png' class='h-full w-full rounded-3xl m-auto'>
-                                                    
-                                                    ";
-                        if (!isset($_SESSION['player' . $i . 'Move'])) {
-                            echo "<input type='radio' name='radio" . $i . "' value='2'>";
-                        }
-                        echo "
-                                                </div>
-                                            </div>
-                                            <div class='flex h-5/6 w-1/5 my-auto mx-auto rounded-3xl'>
-                                                <div class='m-auto h-5/6 w-5/6 rounded-3xl'>
-                                                        <img src='../../images/dude.png' class='h-full w-full rounded-3xl m-auto'>
-                                                    ";
-                        if (!isset($_SESSION['player' . $i . 'Move'])) {
-                            echo "<input type='radio' name='radio" . $i . "' value='3'>";
-                        }
-                        echo "
-                                                </div>
-                                            </div>
-                                            <div class='flex h-5/6 w-1/5 my-auto mx-auto rounded-3xl'>
-                                                <div class='m-auto h-5/6 w-5/6 rounded-3xl'>
-                                                    <img src='../../images/dude.png' class='h-full w-full rounded-3xl m-auto'>
-                                                    ";
-                        if (!isset($_SESSION['player' . $i . 'Move'])) {
-                            echo "<input type='radio' name='radio" . $i . "' value='4'>";
-                        }
-                        echo "
+                                               <div class='flex mx-auto my-1'>
+                                                    <div class='flex mx-auto'>
+                                                       ";
+                                                        if (!isset($_SESSION['player' . $i . 'Move'])) {
+                                                            echo "<input type='radio' name='radio" . $i . "' value='1'>";
+                                                        }
+                                                        echo "
                                                     </div>
-                                            </div>
-                                            <div class='flex h-5/6 w-1/5 my-auto mx-auto rounded-3xl'>
-                                                <div class='m-auto h-5/6 w-5/6 rounded-3xl'>
-                                                        <img src='../../images/dude.png' class='h-full w-full rounded-3xl m-auto'>
-                                                    ";
-                        if (!isset($_SESSION['player' . $i . 'Move'])) {
-                            echo "<input type='radio' name='radio" . $i . "' value='5'>";
-                        }
-                        echo "
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class='flex h-10 w-5/6 m-auto mt-5'>
-                                                    ";
-                        if (!isset($_SESSION['player' . $i . 'Move'])) {
-                            echo "<input type='number' name='player" . $i . "Bet'>";
-                            echo "<input type='submit' name='submit" . $i . "' value='Lock in selection' class='flex m-auto animate-pulse flex items-center px-6 py-2 mt-auto font-semibold text-white bg-black rounded-lg'>";
-                        }
-                        echo "
+                                            
+                                            <div class='flex-column h-5/6 w-1/5 my-auto mx-auto rounded-3xl'>
+                                                <div class='m-auto h-5/6 w-5/6 rounded-3xl'>
+                                                        <img src='../../images/dude.png' class='h-full w-full rounded-3xl m-auto'>
+                                               </div>
+                                               <div class='flex mx-auto my-1'>
+                                                    <div class='flex mx-auto'>
+                                                       ";
+                                                        if (!isset($_SESSION['player' . $i . 'Move'])) {
+                                                            echo "<input type='radio' name='radio" . $i . "' value='2'>";
+                                                        }
+                                                        echo "
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class='flex-column h-5/6 w-1/5 my-auto mx-auto rounded-3xl'>
+                                                <div class='m-auto h-5/6 w-5/6 rounded-3xl'>
+                                                        <img src='../../images/dude.png' class='h-full w-full rounded-3xl m-auto'>
+                                               </div>
+                                               <div class='flex  mx-auto my-1'>
+                                                    <div class='flex mx-auto'>
+                                                       ";
+                                                        if (!isset($_SESSION['player' . $i . 'Move'])) {
+                                                            echo "<input type='radio' name='radio" . $i . "' value='3'>";
+                                                        }
+                                                        echo "
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class='flex-column h-5/6 w-1/5 my-auto mx-auto rounded-3xl'>
+                                                <div class='m-auto h-5/6 w-5/6 rounded-3xl'>
+                                                        <img src='../../images/dude.png' class='h-full w-full rounded-3xl m-auto'>
+                                               </div>
+                                               <div class='flex mx-auto my-1'>
+                                                    <div class='flex mx-auto'>
+                                                       ";
+                                                        if (!isset($_SESSION['player' . $i . 'Move'])) {
+                                                            echo "<input type='radio' name='radio" . $i . "' value='4'>";
+                                                        }
+                                                        echo "
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class='flex-column h-5/6 w-1/5 my-auto mx-auto rounded-3xl'>
+                                                <div class='m-auto h-5/6 w-5/6 rounded-3xl'>
+                                                        <img src='../../images/dude.png' class='h-full w-full rounded-3xl m-auto'>
+                                               </div>
+                                               <div class='flex mx-auto my-1'>
+                                                    <div class='flex mx-auto'>
+                                                       ";
+                                                        if (!isset($_SESSION['player' . $i . 'Move'])) {
+                                                            echo "<input type='radio' name='radio" . $i . "' value='5'>";
+                                                        }
+                                                        echo "
+                                                    </div>
+                                                </div>
+                                            </div>
+                                       </div>
+                                       <div class='flex-column h-auto w-5/6 m-auto mt-5'>
+                                            ";
+                                            if (!isset($_SESSION['player' . $i . 'Move'])) {
+                                                echo "<div class='flex mt-10 justify-center h-auto w-auto mx-auto'>";
+                                                    echo "<input type='number' name='player" . $i . "Bet'>";
+                                                echo "</div>";
+                                                echo "<div class='mt-10'>";
+                                                    echo "<input type='submit' name='submit" . $i . "' value='Lock in selection' class='flex m-auto animate-pulse flex items-center px-6 py-2 mt-auto font-semibold text-white bg-black rounded-lg'>";
+                                                echo "</div>";
+                                            }
+                                            echo "
                                         </div>
                                     </div>
-                                </form>
+                                </form> 
                             </div>";
                         $i++;
                     }
                 }
                 ?>
+
             </div>
         </div>
     </section>
