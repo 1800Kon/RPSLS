@@ -27,9 +27,9 @@ session_start();
                         $winners = $_SESSION['winner'];
 
                         if (count($winners) > 1) {
-                            echo "And the winners are ";
+                            echo "And the winners are <br>";
                         } else {
-                            echo "And the winner is ";
+                            echo "And the winner is <br>";
                         }
                         foreach ($winners as $winner) {
                             echo $winner->getName() . " ";
