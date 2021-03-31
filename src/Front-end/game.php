@@ -3,15 +3,17 @@ include '../Back-end/GameScript.php';
 session_start();
 //session_destroy();
 ?>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="../../tailwind.css" rel="stylesheet">
-        <title>Game</title>
-    </head>
-    <body>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../tailwind.css" rel="stylesheet">
+    <title>Game</title>
+</head>
+
+<body>
     <section class="text-gray-700 body-font self-center">
         <div class="flex h-screen w-screen">
             <div class="flex flex-row h-4/5 w-4/5 mx-auto my-auto self-center">
@@ -113,8 +115,9 @@ session_start();
             </div>
         </div>
     </section>
-    </body>
-    </html>
+</body>
+
+</html>
 
 <?php
 
