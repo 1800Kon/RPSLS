@@ -45,7 +45,7 @@ session_start();
                                         <div class='flex bg-gray-300 mt-5 h-20 rounded-3xl'>
                                             <div class='flex-column h-5/6 w-1/5 my-auto mx-auto rounded-3xl'>
                                                 <div class='m-auto h-5/6 w-5/6 rounded-3xl'>
-                                                        <img src='../../images/dude.png' class='h-full w-full rounded-3xl m-auto'>
+                                                        <img src='../../images/rock.jpg' class='h-full w-full rounded-3xl m-auto'>
                                                </div>
                                                <div class='flex mx-auto my-1'>
                                                     <div class='flex mx-auto'>
@@ -60,7 +60,7 @@ session_start();
                                             
                                             <div class='flex-column h-5/6 w-1/5 my-auto mx-auto rounded-3xl'>
                                                 <div class='m-auto h-5/6 w-5/6 rounded-3xl'>
-                                                        <img src='../../images/dude.png' class='h-full w-full rounded-3xl m-auto'>
+                                                        <img src='../../images/paper.jpg' class='h-full w-full rounded-3xl m-auto'>
                                                </div>
                                                <div class='flex mx-auto my-1'>
                                                     <div class='flex mx-auto'>
@@ -75,7 +75,7 @@ session_start();
                                             
                                             <div class='flex-column h-5/6 w-1/5 my-auto mx-auto rounded-3xl'>
                                                 <div class='m-auto h-5/6 w-5/6 rounded-3xl'>
-                                                        <img src='../../images/dude.png' class='h-full w-full rounded-3xl m-auto'>
+                                                        <img src='../../images/scissors.jpg' class='h-full w-full rounded-3xl m-auto'>
                                                </div>
                                                <div class='flex  mx-auto my-1'>
                                                     <div class='flex mx-auto'>
@@ -90,7 +90,7 @@ session_start();
                                             
                                             <div class='flex-column h-5/6 w-1/5 my-auto mx-auto rounded-3xl'>
                                                 <div class='m-auto h-5/6 w-5/6 rounded-3xl'>
-                                                        <img src='../../images/dude.png' class='h-full w-full rounded-3xl m-auto'>
+                                                        <img src='../../images/lizard.jpg' class='h-full w-full rounded-3xl m-auto'>
                                                </div>
                                                <div class='flex mx-auto my-1'>
                                                     <div class='flex mx-auto'>
@@ -105,7 +105,7 @@ session_start();
                                             
                                             <div class='flex-column h-5/6 w-1/5 my-auto mx-auto rounded-3xl'>
                                                 <div class='m-auto h-5/6 w-5/6 rounded-3xl'>
-                                                        <img src='../../images/dude.png' class='h-full w-full rounded-3xl m-auto'>
+                                                        <img src='../../images/spock.jpg' class='h-full w-full rounded-3xl m-auto'>
                                                </div>
                                                <div class='flex mx-auto my-1'>
                                                     <div class='flex mx-auto'>
