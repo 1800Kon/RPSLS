@@ -57,7 +57,7 @@ session_start();
                                 <option value="4">4</option>
                             </select>
                             <div class="mt-40 mx-auto">
-                                <input class="animate-pulse flex items-center px-24 py-2 mx-auto font-semibold text-white bg-black rounded-lg"
+                                <input class="mx-auto flex items-center px-24 py-2 font-semibold text-white bg-black rounded-lg hover:bg-gray-800 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2"
                                        type="submit" name="submit" value="Continue">
                             </div>
 
