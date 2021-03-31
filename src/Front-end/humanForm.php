@@ -48,7 +48,9 @@ session_start();
                     </div>
                         </form>";
                     } else {
-                        echo "I will give u a tip go to the beninging before the age of players all the way back until you reach the instructions";
+                        session_unset();
+                        session_destroy();
+                        header('Location: index.html');
                     }
                     ?>
             </div>

@@ -75,7 +75,7 @@ if (isset($_POST['submit'])) {
     if (isset($_SESSION['game'])) {
         $game = $_SESSION['game'];
         $numberOfPlayers = count($game->getPlayers()) + $_POST['numCpuPlayers'];
-        if ($numberOfPlayers <= 4 && $numberOfPlayers >= 2) {
+        if (is_numeric($_POST['numCpuPlayers']) && ($numberOfPlayers <= 4 && $numberOfPlayers >= 0)) {
             for ($i = 0; $i < ($_POST['numCpuPlayers']); $i++) {
                 $game->addPlayer(new ComputerPlayer("computer" . ($i + 1)));
             }
