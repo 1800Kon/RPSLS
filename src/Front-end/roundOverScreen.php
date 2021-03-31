@@ -36,8 +36,8 @@ session_start();
                             <table class="min-w-max w-full table-auto">
                                 <thead>
                                 <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
-                                    <th class="py-3 px-6 text-left">Name</th>
-                                    <th class="py-3 px-6 text-left">Points</th>
+                                    <th class="py-3 px-6 text-center">Name</th>
+                                    <th class="py-3 px-6 text-center">Points</th>
                                     <th class="py-3 px-6 text-center">Move</th>
                                     <th class="py-3 px-6 text-center">Bet</th>
                                 </tr>
@@ -63,17 +63,17 @@ session_start();
                                             echo '
                                                 <tr class="border-b border-gray-200 hover:bg-gray-100">
                                                     <td class="py-3 px-6 text-left whitespace-nowrap">
-                                                        <div class="flex items-center">
+                                                        <div class="flex items-center justify-center">
                                                             <span class="font-medium">' . $player->getName() . '</span>
                                                         </div>
                                                     </td>
                                                     <td class="py-3 px-6 text-left">
-                                                        <div class="flex items-center">
+                                                        <div class="flex items-center justify-center">
                                                             <span>' . $player->getPoints() . '</span>
                                                         </div>
                                                     </td>
                                                     <td class="py-3 px-6 text-left">
-                                                        <div class="flex items-center">
+                                                        <div class="flex items-center justify-center">
                                                             <span>' ?>
                                             <?php
                                             switch ($player->getMove()) {

@@ -35,7 +35,7 @@ session_start();
                         for ($i = 0; $i < $playerCount; $i++) {
                             echo "<div>
                                 <input name='player" . ($i + 1) . "' placeholder='Player  " . ($i + 1) . "'s name'
-                                class='w-full px-4 py-2 mb-4 text-black bg-gray-100 border-transparent rounded-lg mr-4text-base'>
+                                class='w-full px-4 py-2 mb-4 text-black bg-gray-100 border-transparent rounded-lg mr-4 text-base'>
                                 </div>";
                         }
                     }
@@ -43,7 +43,7 @@ session_start();
                     if ($playerCount != null) {
                         echo "
                     <input
-                        class='px-8 py-2 font-semibold text-white bg-black rounded-lg hover:bg-gray-800 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2'
+                        class='w-full px-4 py-2 mb-4 text-white bg-black border-transparent rounded-lg mr-4 text-base hover:bg-gray-800 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2'
                         type='submit' name='submit' value='next'>
                     </div>
                         </form>";
